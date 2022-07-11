@@ -9,12 +9,12 @@ require 'rails_helper'
 RSpec.describe 'As a visitor' do
   describe 'when I visit /books' do
     it 'can see each book in the system with its attributes' do
+      book1 = Book.create!(name: 'The Stand', length: 1152, in_print: true)
+      book2 = Book.create!(name: 'It', length: 1138, in_print: true)
+      
       visit '/books'
 
       expect(current_path).to eq('/books')
-
-      book1 = Book.create!(name: 'The Stand', length: 1152, in_print: true)
-      book2 = Book.create!(name: 'It', length: 1138, in_print: true)
 
       expect(page).to have_content(book1.name)
       expect(page).to have_content(book1.length)
