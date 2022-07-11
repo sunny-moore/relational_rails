@@ -40,7 +40,7 @@ group :development, :test do
   gem 'capybara'
   gem 'launchy'
   gem 'pry'
-  gem 'rails_helper'
+  #gem 'rails_helper' #never use this ever it breaks everything. for real, yo
   gem 'rspec-rails'
 
   gem 'simplecov'
