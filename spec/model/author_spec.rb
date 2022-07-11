@@ -1,6 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe Author do
+  # describe 'validations' do
+  #   it { should validate_presence_of (:name) }
+  #   it { should validate_presence_of :awards }
+  #   it { should validate_presence_of :deceased }
+  # end
   describe 'instance methods' do
     describe '#deceased' do
       it 'is false by default' do
