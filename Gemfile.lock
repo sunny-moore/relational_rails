@@ -76,7 +76,7 @@ GEM
     ffi (1.15.5)
     globalid (1.0.0)
       activesupport (>= 5.0)
-    i18n (1.10.0)
+    i18n (1.11.0)
       concurrent-ruby (~> 1.0)
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
@@ -92,7 +92,6 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.1)
       mini_mime (>= 0.1.1)
-    map (6.6.0)
     marcel (1.0.2)
     matrix (0.4.2)
     method_source (1.0.0)
@@ -130,12 +129,6 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.4.3)
       loofah (~> 2.3)
-    rails_current (2.2.0)
-      map (~> 6.0)
-    rails_default_url_options (6.0.0)
-    rails_helper (2.2.2)
-      rails_current (>= 1.0)
-      rails_default_url_options (>= 1.0)
     railties (5.2.8)
       actionpack (= 5.2.8)
       activesupport (= 5.2.8)
@@ -224,7 +217,6 @@ DEPENDENCIES
   pry
   puma (~> 3.11)
   rails (~> 5.2.8)
-  rails_helper
   rspec-rails
   sass-rails (~> 5.0)
   shoulda-matchers (~> 5.0)
