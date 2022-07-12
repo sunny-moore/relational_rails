@@ -4,7 +4,7 @@ RSpec.describe Book do
   describe 'validations' do
     it { should validate_presence_of :name }
     it { should validate_presence_of :length }
-    it { should validate_presence_of :in_print }
+    it { should validate_inclusion_of :in_print, in: [true, false] }
   end
   #   describe 'instance methods' do
 #     describe '#name' do
