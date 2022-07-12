@@ -1,0 +1,6 @@
+<h1><%=@author.name%> Books</h1>
+<% @books.each do |book| %>
+  <h2><%= book.name %></h2>
+  <p>Page Count: <%= book.length %></p>
+  <p>In Print: <%= book.in_print %></p>
+<% end %>
