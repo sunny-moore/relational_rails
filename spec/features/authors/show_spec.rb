@@ -18,13 +18,14 @@ RSpec.describe 'Author show page' do
     expect(page).to have_content(author.created_at)
     expect(page).to have_content(author.updated_at)
   end
-  it 'shows a count of Authors books(User Story 7)' do
-    author = Author.create!(name: 'Stephen King')
+  it 'shows a count of the authors books (User Story 7)' do
+    author = Author.create!(name: 'Stephen King', deceased: false, awards: 10)
     book1 = author.books.create!(name: 'The Stand', length: 1152, in_print: true)
     book2 = author.books.create!(name: 'It', length: 1138, in_print: true)
     book3 = author.books.create!(name: 'Carrie', length: 199, in_print: false)
 
     visit "/authors/#{author.id}"
-    expect(page).to have_content('Books Written: 3')
+
+    expect(page).to have_content("Books Written: 3")
   end
 end
