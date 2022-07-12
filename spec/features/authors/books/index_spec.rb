@@ -17,7 +17,7 @@ RSpec.describe 'Authors Books Index' do
     book4 = author2.books.create!(name: 'A Tale of Two Cities', length: 448, in_print: false)
 
     visit "/authors/#{author.id}/books"
-
+    
     expect(page).to have_content(book1.name)
     expect(page).to have_content(book2.name)
     expect(page).to have_content(book3.name)
