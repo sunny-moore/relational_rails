@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(version: 2022_07_12_005331) do
 
   create_table "authors", force: :cascade do |t|
     t.string "name"
-    t.integer "awards", default: 0
-    t.boolean "deceased", default: false
+    t.integer "awards", default: 0, null: false
+    t.boolean "deceased", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
