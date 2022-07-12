@@ -25,7 +25,7 @@ RSpec.describe 'authors#index', type: :feature do
 
     visit "/authors/#{author1.id}"
     expect(page).to have_content('Authors Index')
-    visit "/authors/"
+    visit '/authors/'
     expect(page).to have_content('Authors Index')
   end
 end
