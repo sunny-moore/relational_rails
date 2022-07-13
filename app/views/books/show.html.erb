@@ -1,3 +1,4 @@
 <h1><u><%= @book.name %></u></h1>
 <p><h3>Page Count: <%= @book.length %></h3></p>
 <p><h3>In Print: <%= @book.in_print %></h3></p>
+<p><%= link_to 'Update Book', "/books/#{@book.id}/edit" %></p>
