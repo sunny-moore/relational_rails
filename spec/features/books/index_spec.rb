@@ -36,4 +36,11 @@ RSpec.describe 'As a visitor' do
     visit "/authors/#{author2.id}"
     expect(page).to have_link('Books Index')
   end
+  describe 'User Story 15 - books index only shows in_print: true' do
+    it 'Only shows books whose in_print is true' do
+      visit '/books'
+
+      expect(page).to_not have_content('In Print: false')
+    end
+  end
 end
