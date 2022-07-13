@@ -26,7 +26,6 @@ RSpec.describe 'author/new page' do
 
   it '/author/new has a form that will create a new Author' do
     visit '/authors/new'
-save_and_open_page
 
     fill_in('Name', with: 'James Collins')
     fill_in('Awards', with: 0)
