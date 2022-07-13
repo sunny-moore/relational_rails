@@ -30,5 +30,15 @@ RSpec.describe Author do
       expect(author.count_books).to eq(3)
       expect(author2.count_books).to eq(1)
     end
+    it 'can sort children by name(User Story 16)' do
+      author = Author.create!(name: 'Stephen King')
+      book1 = author.books.create!(name: 'The Stand', length: 1152, in_print: true)
+      book2 = author.books.create!(name: 'It', length: 1138, in_print: true)
+      book3 = author.books.create!(name: 'Carrie', length: 199, in_print: false)
+
+      books = author.sort_books_by_name
+      
+      expect(books.first.name).to eq('Carrie')
+    end
   end
 end

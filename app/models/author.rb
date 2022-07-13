@@ -8,7 +8,13 @@ class Author < ApplicationRecord
   def self.order_by_created_at
     Author.order(created_at: :desc)
   end
+
   def count_books
     books.count
+  end
+
+  def sort_books_by_name
+    self.books.order('name')
+    
   end
 end
