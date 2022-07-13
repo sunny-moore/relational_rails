@@ -1,0 +1,16 @@
+<%= form_with url: "/books/#{@book.id}", method: :patch, local: true do |form| %>
+  <p>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </p>
+  <p>
+    <%= form.label :length %>
+    <%= form.text_field :length %>
+  </p>
+  <p>
+    <%= form.label :in_print %>
+    <%= form.text_field :in_print %>
+  </p>
+
+  <%= form.submit "Update Book" %>
+<% end %>
