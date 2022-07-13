@@ -12,8 +12,17 @@ class AuthorsController < ApplicationController
 
   def create
     @author = Author.create(author_params)
-    #binding.pry
     redirect_to '/authors'
+  end
+  
+  def edit 
+    @author = Author.find(params[:id])
+  end
+  
+  def update 
+    @author = Author.find(params[:id])
+    @author.update(author_params)
+    redirect_to "/authors/#{@author.id}"
   end
   
   private

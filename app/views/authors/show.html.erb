@@ -5,3 +5,4 @@
 <p>Books Written: <%= @author.count_books %></p>
 <p>Created At: <%= @author.created_at %></p>
 <p>Updated At: <%= @author.updated_at %></p>
+<p><%= link_to 'Update Author', "/authors/#{@author.id}/edit" %></p>
